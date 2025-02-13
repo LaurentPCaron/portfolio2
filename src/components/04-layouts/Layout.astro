@@ -1,3 +1,7 @@
+---
+import "../../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,13 +12,21 @@
     <title>Astro Basics</title>
   </head>
   <body>
-    <slot />
+    <div class="grid grid-cols-10">
+      <header class="border-primary col-span-2 h-screen border-l-[10px]">
+        <h1>Astro Basics</h1>
+      </header>
+      <main class="bg-secondary col-span-8">
+        <slot />
+      </main>
+    </div>
   </body>
 </html>
 
 <style>
   html,
   body {
+    background-color: #000;
     margin: 0;
     width: 100%;
     height: 100%;
