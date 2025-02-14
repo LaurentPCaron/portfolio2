@@ -1,5 +1,6 @@
 ---
 import "../../styles/global.css";
+import Header from "../03-Organisms/Header.astro";
 ---
 
 <!doctype html>
@@ -7,16 +8,18 @@ import "../../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
   </head>
   <body>
-    <div class="grid grid-cols-10">
-      <header class="border-primary col-span-2 h-screen border-l-[10px]">
-        <h1>Astro Basics</h1>
-      </header>
-      <main class="bg-secondary col-span-8">
+    <div class="grid grid-cols-[4.5rem_auto] text-white">
+      <Header />
+      <main class="bg-primary">
         <slot />
       </main>
     </div>
