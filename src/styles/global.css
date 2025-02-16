@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  /*Colors*/
   --color-white: #fff;
   --color-black: #000;
 
@@ -9,4 +10,9 @@
   --color-pink: #fc05a1;
 
   --color-turquoise: #00fee8;
+
+  /*Breakpoints*/
+  --breakpoint-sm: 48rem;
+  --breakpoint-md: 64rem;
+  --breakpoint-lg: 80rem;
 }

@@ -17,7 +17,14 @@ import Header from "../03-Organisms/Header.astro";
     <title>Astro Basics</title>
   </head>
   <body>
-    <div class="grid grid-cols-[4.5rem_auto] text-white">
+    <div
+      class:list={[
+        "grid grid-cols-[4.5rem_auto] text-white",
+        "sm:grid-cols-[6rem_auto]",
+        "md:grid-cols-[12rem_auto]",
+        "lg:grid-cols-[20rem_auto]",
+      ]}
+    >
       <Header />
       <main class="bg-primary">
         <slot />
