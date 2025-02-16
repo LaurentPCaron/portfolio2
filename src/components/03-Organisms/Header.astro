@@ -5,11 +5,18 @@ import Image from "astro/components/Image.astro";
 
 <header
   class:list={[
-    "border-pink fixed h-screen overflow-hidden border-l-[10px] bg-black",
+    "border-pink fixed h-screen w-[4.5rem] overflow-hidden border-l-[10px] bg-black",
+    "sm:w-[6rem]",
+    "md:w-[14rem]",
+    "lg:w-[20rem]",
   ]}
 >
   <a class="" href="/"
-    ><Image class="max-w-40 px-2 pt-10 pb-12" src={icon} alt="Mon logo" /></a
+    ><Image
+      class="w-full max-w-40 px-2 pt-10 pb-12"
+      src={icon}
+      alt="Mon logo"
+    /></a
   >
   <ul
     class:list={[
@@ -18,14 +25,14 @@ import Image from "astro/components/Image.astro";
     ]}
   >
     <li>
-      <a href="#"
+      <a href="#" class="md:w-fit"
         ><i class:list={["fa-solid fa-house", "md:!hidden"]}></i><span
           class:list={["hidden", "md:inline md:px-3"]}>Acceuil</span
         ></a
       >
     </li>
     <li>
-      <a href="#"
+      <a href="#" class="md:w-fit"
         ><i class:list={["fa-solid fa-id-card", "md:!hidden"]}></i><span
           class:list={["hidden", "md:inline md:px-3"]}
         >
@@ -34,13 +41,13 @@ import Image from "astro/components/Image.astro";
       >
     </li>
     <li>
-      <a href="#"
+      <a href="#" class="md:w-fit"
         ><span class:list={["hidden", "md:inline md:px-3"]}>Projets</span><i
           class:list={["fa-solid fa-code", "md:!hidden"]}></i></a
       >
     </li>
     <li>
-      <a href="#"
+      <a href="#" class="md:w-fit"
         ><span class:list={["hidden", "md:inline md:px-3"]}>Me contacter</span
         ><i class:list={["fa-regular fa-paper-plane", "md:!hidden"]}></i></a
       >
@@ -52,7 +59,6 @@ import Image from "astro/components/Image.astro";
   ul {
     a {
       display: block;
-      width: 100%;
       padding: 12px 0;
       position: relative;
       z-index: 1;
