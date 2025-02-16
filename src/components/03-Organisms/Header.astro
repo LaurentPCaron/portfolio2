@@ -3,35 +3,46 @@ import icon from "../../img/logo.png";
 import Image from "astro/components/Image.astro";
 ---
 
-<header class:list={["border-pink h-screen border-l-[10px]"]}>
+<header
+  class:list={[
+    "border-pink fixed h-screen overflow-hidden border-l-[10px] bg-black",
+  ]}
+>
   <a class="" href="/"
-    ><Image class="px-2 pt-10 pb-12" src={icon} alt="Mon logo" /></a
+    ><Image class="max-w-40 px-2 pt-10 pb-12" src={icon} alt="Mon logo" /></a
   >
-  <ul class="flex flex-col items-center gap-y-6 text-center">
+  <ul
+    class:list={[
+      "flex flex-col items-center gap-y-6 text-center text-2xl",
+      "md:text-left md:text-3xl",
+    ]}
+  >
     <li>
       <a href="#"
-        ><i class:list={["fa-solid fa-house text-2xl", "md:!hidden"]}></i><span
-          class:list={["hidden", "md:inline"]}>Acceuil</span
+        ><i class:list={["fa-solid fa-house", "md:!hidden"]}></i><span
+          class:list={["hidden", "md:inline md:px-3"]}>Acceuil</span
         ></a
       >
     </li>
     <li>
       <a href="#"
-        ><i class:list={["fa-solid fa-id-card text-2xl", "md:!hidden"]}
-        ></i><span class:list={["hidden", "md:inline"]}> À propos </span></a
+        ><i class:list={["fa-solid fa-id-card", "md:!hidden"]}></i><span
+          class:list={["hidden", "md:inline md:px-3"]}
+        >
+          À propos
+        </span></a
       >
     </li>
     <li>
       <a href="#"
-        ><span class:list={["hidden", "md:inline"]}>Projets</span><i
-          class:list={["fa-solid fa-code text-2xl", "md:!hidden"]}></i></a
+        ><span class:list={["hidden", "md:inline md:px-3"]}>Projets</span><i
+          class:list={["fa-solid fa-code", "md:!hidden"]}></i></a
       >
     </li>
     <li>
       <a href="#"
-        ><span class:list={["hidden", "md:inline"]}>Me contacter</span><i
-          class:list={["fa-regular fa-paper-plane text-2xl", "md:!hidden"]}
-        ></i></a
+        ><span class:list={["hidden", "md:inline md:px-3"]}>Me contacter</span
+        ><i class:list={["fa-regular fa-paper-plane", "md:!hidden"]}></i></a
       >
     </li>
   </ul>

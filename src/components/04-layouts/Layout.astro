@@ -19,14 +19,14 @@ import Header from "../03-Organisms/Header.astro";
   <body>
     <div
       class:list={[
-        "grid grid-cols-[4.5rem_auto] text-white",
+        "relative grid grid-cols-[4.5rem_auto] text-white",
         "sm:grid-cols-[6rem_auto]",
-        "md:grid-cols-[12rem_auto]",
-        "lg:grid-cols-[20rem_auto]",
+        "md:grid-cols-[14rem_auto]",
+        "lg:grid-cols-[22rem_auto]",
       ]}
     >
       <Header />
-      <main class="bg-primary">
+      <main class="relative left-0 h-[2000px]">
         <slot />
       </main>
     </div>
@@ -36,7 +36,7 @@ import Header from "../03-Organisms/Header.astro";
 <style>
   html,
   body {
-    background-color: #000;
+    background-color: var(--color-primary);
     margin: 0;
     width: 100%;
     height: 100%;
