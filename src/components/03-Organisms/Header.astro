@@ -18,45 +18,59 @@ import Image from "astro/components/Image.astro";
       alt="Mon logo"
     /></a
   >
-  <ul
-    class:list={[
-      "flex flex-col items-center gap-y-6 text-center text-2xl",
-      "md:text-left md:text-3xl",
-    ]}
-  >
-    <li>
-      <a href="#" class="md:w-fit"
-        ><i class:list={["fa-solid fa-house", "md:!hidden"]}></i><span
-          class:list={["hidden", "md:inline md:px-3"]}>Acceuil</span
-        ></a
-      >
-    </li>
-    <li>
-      <a href="#" class="md:w-fit"
-        ><i class:list={["fa-solid fa-id-card", "md:!hidden"]}></i><span
-          class:list={["hidden", "md:inline md:px-3"]}
+  <nav>
+    <ul
+      class:list={[
+        "flex flex-col items-center gap-y-6 text-center text-2xl",
+        "md:text-left md:text-3xl",
+      ]}
+    >
+      <li>
+        <a href="#" class="md:w-fit"
+          ><i class:list={["fa-solid fa-house", "md:!hidden"]}></i><span
+            class:list={["hidden", "md:inline md:px-3"]}>Acceuil</span
+          ></a
         >
-          À propos
-        </span></a
+      </li>
+      <li>
+        <a href="#" class="md:w-fit"
+          ><i class:list={["fa-solid fa-id-card", "md:!hidden"]}></i><span
+            class:list={["hidden", "md:inline md:px-3"]}
+          >
+            À propos
+          </span></a
+        >
+      </li>
+      <li>
+        <a href="#" class="md:w-fit"
+          ><span class:list={["hidden", "md:inline md:px-3"]}>Projets</span><i
+            class:list={["fa-solid fa-code", "md:!hidden"]}></i></a
+        >
+      </li>
+      <li>
+        <a href="#" class="md:w-fit"
+          ><span class:list={["hidden", "md:inline md:px-3"]}>Me contacter</span
+          ><i class:list={["fa-regular fa-paper-plane", "md:!hidden"]}></i></a
+        >
+      </li>
+    </ul>
+  </nav>
+  <ul>
+    <li>
+      <a href="http://google.com" target="_blank" rel="noopener noreferrer"
+        ><i class="fa-brands fa-linkedin"></i></a
       >
     </li>
     <li>
-      <a href="#" class="md:w-fit"
-        ><span class:list={["hidden", "md:inline md:px-3"]}>Projets</span><i
-          class:list={["fa-solid fa-code", "md:!hidden"]}></i></a
-      >
-    </li>
-    <li>
-      <a href="#" class="md:w-fit"
-        ><span class:list={["hidden", "md:inline md:px-3"]}>Me contacter</span
-        ><i class:list={["fa-regular fa-paper-plane", "md:!hidden"]}></i></a
+      <a href="github.com" target="_blank" rel="noopener noreferrer"
+        ><i class="fa-brands fa-github"></i></a
       >
     </li>
   </ul>
 </header>
 
 <style lang="scss">
-  ul {
+  nav {
     a {
       display: block;
       padding: 12px 0;
