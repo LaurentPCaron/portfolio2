@@ -11,13 +11,16 @@ import Image from "astro/components/Image.astro";
     "lg:w-[20rem]",
   ]}
 >
-  <a class="" href="/"
+  <!-- Logo Section -->
+  <a href="/"
     ><Image
-      class="w-full max-w-40 px-2 pt-10 pb-12"
+      class="w-full max-w-40 px-2 pt-8 pb-12 md:pl-8"
       src={icon}
       alt="Mon logo"
     /></a
   >
+
+  <!-- Navigation Section -->
   <nav>
     <ul
       class:list={[
@@ -28,14 +31,14 @@ import Image from "astro/components/Image.astro";
       <li>
         <a href="#" class="md:w-fit"
           ><i class:list={["fa-solid fa-house", "md:!hidden"]}></i><span
-            class:list={["hidden", "md:inline md:px-3"]}>Acceuil</span
+            class:list={["hidden", "md:block md:pl-8"]}>Acceuil</span
           ></a
         >
       </li>
       <li>
         <a href="#" class="md:w-fit"
           ><i class:list={["fa-solid fa-id-card", "md:!hidden"]}></i><span
-            class:list={["hidden", "md:inline md:px-3"]}
+            class:list={["hidden", "md:block md:pl-8"]}
           >
             À propos
           </span></a
@@ -43,34 +46,61 @@ import Image from "astro/components/Image.astro";
       </li>
       <li>
         <a href="#" class="md:w-fit"
-          ><span class:list={["hidden", "md:inline md:px-3"]}>Projets</span><i
+          ><span class:list={["hidden", "md:block md:pl-8"]}>Projets</span><i
             class:list={["fa-solid fa-code", "md:!hidden"]}></i></a
         >
       </li>
       <li>
         <a href="#" class="md:w-fit"
-          ><span class:list={["hidden", "md:inline md:px-3"]}>Me contacter</span
+          ><span class:list={["hidden", "md:block md:pl-8"]}>Me contacter</span
           ><i class:list={["fa-regular fa-paper-plane", "md:!hidden"]}></i></a
         >
       </li>
     </ul>
   </nav>
-  <ul>
-    <li>
-      <a href="http://google.com" target="_blank" rel="noopener noreferrer"
-        ><i class="fa-brands fa-linkedin"></i></a
-      >
-    </li>
-    <li>
-      <a href="github.com" target="_blank" rel="noopener noreferrer"
-        ><i class="fa-brands fa-github"></i></a
-      >
-    </li>
-  </ul>
+
+  <!-- Contact Section -->
+  <div class:list={["text-pink pt-20", "md:pl-8"]}>
+    <p class="mb-2 hidden text-2xl font-bold md:block">Contacts</p>
+    <ul
+      class:list={[
+        "flex flex-col items-center gap-3 text-xl",
+        "md:flex-row md:text-2xl",
+      ]}
+    >
+      <li>
+        <a href="http://google.com" target="_blank" rel="noopener noreferrer"
+          ><span class="sr-only">Linkedin</span><i
+            class="fa-brands fa-linkedin"
+            aria-hidden></i></a
+        >
+      </li>
+      <li>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+          ><span class="sr-only">Github</span><i
+            class="fa-brands fa-github"
+            aria-hidden></i></a
+        >
+      </li>
+      <li>
+        <a
+          href="mailto:info@laurentpcaron.ninja"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="sr-only">M'écrire</span><i
+            class="fa-solid fa-envelope"
+            aria-hidden></i></a
+        >
+      </li>
+    </ul>
+  </div>
 </header>
 
 <style lang="scss">
   nav {
+    li {
+      width: 100%;
+    }
     a {
       display: block;
       padding: 12px 0;
@@ -96,9 +126,5 @@ import Image from "astro/components/Image.astro";
         transition: translate 0.1s ease-in-out;
       }
     }
-  }
-
-  li {
-    width: 100%;
   }
 </style>
