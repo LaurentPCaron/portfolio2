@@ -1,0 +1,11 @@
+---
+import Layout from "../../components/04-layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "fr" } }];
+}
+
+const { lang } = Astro.params;
+---
+
+<Layout />
