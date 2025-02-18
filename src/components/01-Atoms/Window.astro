@@ -1,0 +1,47 @@
+---
+/**
+ * Window Component
+ *
+ * This component renders a window-like UI element with a title and customizable border color.
+ *
+ * Props:
+ * - title (string): The title displayed in the window header.
+ * - color (string, optional): The color used for the border and text. Defaults to "#fff".
+ */
+
+interface WindowProps {
+  title: string;
+  color?: string;
+}
+
+const { title, color = "#fff" } = Astro.props;
+---
+
+<div class="wrapper mr-10 ml-44 h-[500px] border bg-black">
+  <div class="head flex h-8 justify-between border-b border-inherit">
+    <p class="ml-5 place-self-center">{title}</p>
+    <div class="flex items-center justify-center text-lg">
+      <i class="fa-solid fa-heart aspect-square h-full border-l"></i>
+      <i class="fa-solid fa-fire block aspect-square h-full border-l"></i>
+    </div>
+  </div>
+
+  <div>
+    <slot />
+  </div>
+</div>
+
+<style lang="scss" define:vars={{ color }}>
+  .wrapper,
+  .head,
+  i {
+    border-color: var(--color);
+  }
+
+  .head {
+    color: var(--color);
+  }
+  i {
+    @apply flex items-center justify-center;
+  }
+</style>

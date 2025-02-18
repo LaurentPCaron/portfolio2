@@ -1,5 +1,6 @@
 ---
 import TypingFont from "../../components/01-Atoms/TypingFont.astro";
+import Window from "../../components/01-Atoms/Window.astro";
 import Layout from "../../components/04-layouts/Layout.astro";
 
 export function getStaticPaths() {
@@ -10,5 +11,13 @@ const { lang } = Astro.params;
 ---
 
 <Layout>
-  <TypingFont text="Laurent‑Philippe Caron" />
+  <Window title="Welcome" color="#00fee8"
+    ><TypingFont text="Laurent‑Philippe Caron" /></Window
+  >
 </Layout>
+
+<style lang="scss">
+  i {
+    @apply flex items-center justify-center;
+  }
+</style>

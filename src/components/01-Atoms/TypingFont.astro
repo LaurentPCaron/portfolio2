@@ -17,9 +17,7 @@ interface Props {
 const { text, color = "#fff" } = Astro.props;
 ---
 
-<div
-  class="wrapper font-press-start-2p-regular relative inline-block text-[6rem]"
->
+<div class="wrapper relative inline-block text-[6rem]">
   <p class="absolute top-0 -z-10 w-full">{text}</p>
   <div aria-hidden="true" class="flex">
     <p id="typer" class="typing w-0 grow-[1]"></p>
