@@ -1,0 +1,65 @@
+---
+/**
+ * TypingFont Component
+ *
+ * This component displays a typing animation effect for the given text.
+ *
+ * Props:
+ * - text (string): The text to be displayed with the typing animation.
+ * - color (string, optional): The color of the text. Defaults to "#fff".
+ */
+
+interface Props {
+  text: string;
+  color?: string;
+}
+
+const { text, color = "#fff" } = Astro.props;
+---
+
+<div
+  class="wrapper font-press-start-2p-regular relative inline-block text-[6rem]"
+>
+  <p class="absolute top-0 -z-10 w-full">{text}</p>
+  <div aria-hidden="true" class="flex">
+    <p id="typer" class="typing w-0 grow-[1]"></p>
+  </div>
+</div>
+
+<script is:inline define:vars={{ text }}>
+  const typing = document.querySelector("#typer");
+  const typingText = text;
+
+  const addChar = (counter) => {
+    setTimeout(() => {
+      const result = typingText.substring(0, counter + 1);
+      typing.innerHTML = result;
+      if (result !== typingText) {
+        addChar(counter + 1);
+      }
+    }, 75);
+  };
+
+  addChar(0);
+</script>
+
+<style lang="scss" define:vars={{ color }}>
+  .typing {
+    &::after {
+      width: fit-content;
+      content: "|";
+      animation: caret 0.75s infinite;
+    }
+  }
+
+  //animation
+  @keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
+
+  .wrapper {
+    color: var(--color);
+  }
+</style>
