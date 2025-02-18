@@ -8,4 +8,47 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 ---
 
-<Layout />
+<Layout>
+  <div
+    class="font-press-start-2p-regular relative inline-block text-[6rem] text-green-500"
+  >
+    <div class="absolute top-0 -z-10 w-full">Laurent‑Philippe Caron</div>
+    <div class="flex">
+      <div id="typer" class="typing w-0 grow-[1]"></div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const typing = document.querySelector("#typer");
+  const test = "Laurent‑Philippe Caron";
+
+  const addChar = (counter: number) => {
+    setTimeout(() => {
+      const result = test.substring(0, counter + 1);
+      typing!.innerHTML = result;
+      if (result.toString() !== test) {
+        addChar(counter + 1);
+      }
+    }, 75);
+  };
+
+  addChar(0);
+</script>
+
+<style lang="scss">
+  .typing {
+    &::after {
+      width: 100%;
+      content: "❚";
+      animation: caret 0.75s infinite;
+    }
+  }
+
+  //animation
+  @keyframes caret {
+    50% {
+      color: transparent;
+    }
+  }
+</style>

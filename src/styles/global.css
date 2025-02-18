@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -15,4 +16,8 @@
   --breakpoint-sm: 48rem;
   --breakpoint-md: 64rem;
   --breakpoint-lg: 80rem;
+
+  /*Font*/
+
+  --font-press-start-2p-regular: "Press Start 2P", sans-serif;
 }
