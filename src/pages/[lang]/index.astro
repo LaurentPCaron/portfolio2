@@ -11,9 +11,20 @@ const { lang } = Astro.params;
 ---
 
 <Layout>
-  <Window title="Welcome" color="#00fee8"
-    ><TypingFont text="Laurent‑Philippe Caron" /></Window
-  >
+  <div class="mt-60 h-screen">
+    <Window class="mr-10 ml-40" title="Welcome" color="#00fee8"
+      ><TypingFont text="Laurent‑Philippe Caron" /></Window
+    >
+    <Window
+      class="mr-16 ml-auto h-72 w-[600px] -translate-y-40"
+      title="Titre"
+      color="pink"
+    >
+      <p class="text-5xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+    </Window>
+  </div>
 </Layout>
 
 <style lang="scss">

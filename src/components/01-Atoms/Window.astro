@@ -12,12 +12,13 @@
 interface WindowProps {
   title: string;
   color?: string;
+  class?: string;
 }
 
-const { title, color = "#fff" } = Astro.props;
+const { title, color = "#fff", class: className } = Astro.props;
 ---
 
-<div class="wrapper mr-10 ml-44 h-[500px] border bg-black">
+<div class:list={["wrapper border bg-black", className]}>
   <div class="head flex h-8 justify-between border-b border-inherit">
     <p class="ml-5 place-self-center">{title}</p>
     <div class="flex items-center justify-center text-lg">
@@ -26,7 +27,7 @@ const { title, color = "#fff" } = Astro.props;
     </div>
   </div>
 
-  <div>
+  <div class="mx-5">
     <slot />
   </div>
 </div>
@@ -36,6 +37,7 @@ const { title, color = "#fff" } = Astro.props;
   .head,
   i {
     border-color: var(--color);
+    box-shadow: 0 0 5px 1px var(--color);
   }
 
   .head {
