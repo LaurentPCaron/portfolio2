@@ -12,13 +12,14 @@
 interface Props {
   text: string;
   color?: string;
+  class?: string;
 }
 
-const { text, color = "#fff" } = Astro.props;
+const { text, color = "#fff", class: className } = Astro.props;
 ---
 
-<div class="wrapper inline-block text-[6rem]">
-  <p id="typer" class="typing w-0 grow-[1]"></p>
+<div class:list={[className, "wrapper"]}>
+  <p id="typer" class="typing"></p>
 </div>
 
 <script is:inline define:vars={{ text }}>

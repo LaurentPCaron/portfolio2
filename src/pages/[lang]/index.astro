@@ -11,18 +11,22 @@ const { lang } = Astro.params;
 ---
 
 <Layout>
-  <div class="mt-60 h-screen">
-    <Window class="mr-10 ml-40" title="Welcome" color="#00fee8"
-      ><TypingFont text="Laurent‑Philippe Caron" /></Window
+  <div class="h-screen bg-amber-400 md:mt-16">
+    <Window
+      class="h-[20rem] sm:w-7/12 md:ml-24 md:h-[35rem]"
+      title="Welcome"
+      color="#00fee8"
+      ><TypingFont
+        class="text-[3.5rem] md:text-9xl"
+        text="Laurent-Philippe Caron"
+      /></Window
     >
     <Window
-      class="mr-16 ml-auto h-72 w-[600px] -translate-y-40"
-      title="Titre"
+      class="mt-5 h-32 sm:-mt-20 sm:mr-5 sm:ml-auto sm:w-7/12 md:h-52"
+      title="Job"
       color="pink"
     >
-      <p class="text-5xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
+      <p class:list={["text-3xl", "md:text-6xl"]}>Programmeur front-end</p>
     </Window>
   </div>
 </Layout>
